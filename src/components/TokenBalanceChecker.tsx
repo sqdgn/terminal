@@ -19,7 +19,7 @@ export function TokenBalanceChecker() {
   });
 
   return (
-    <div>
+    <div className='main-container'>
       <div className="wallet-connect-button">
         <ConnectButton 
           accountStatus={{
