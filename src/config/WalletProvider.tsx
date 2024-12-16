@@ -4,9 +4,11 @@ import { WagmiProvider } from 'wagmi';
 import { base } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || '';
+
 const config = getDefaultConfig({
   appName: 'Base Token Checker',
-  projectId: 'YOUR_WALLETCONNECT_PROJECT_ID', // Get from https://cloud.walletconnect.com
+  projectId: projectId,
   chains: [base],
   ssr: false,
 });
